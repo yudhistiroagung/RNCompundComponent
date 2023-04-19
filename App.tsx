@@ -12,14 +12,28 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ProductDetail product={droneFVP}>
+        {/** putting View component inside product detail will show warning on console
+         * and this View will not be rendered
+         */}
+        <View />
         <ProductDetail.Image />
         <ProductDetail.Name style={{ color: '#333333' }} />
-        <ProductDetail.Price style={{ color: '#333333' }} />
+        <ProductDetail.Rating />
+        <ProductDetail.Price />
+        <ProductDetail.Description />
       </ProductDetail>
       <Spacer />
       <ProductDetail product={remoteControl}>
-        <ProductDetail.Image />
+        {/** notice that we put ProductDetail.Name, only the first one will be rendered
+         * this is also shows warning on console
+         */}
         <ProductDetail.Name style={{ color: 'red' }} />
+        <ProductDetail.Name />
+        {/* still render image on top eventhough we put it in the last order */}
+        <ProductDetail.Image />
+        <ProductDetail.Rating />
+        <ProductDetail.Price />
+        <ProductDetail.Description />
       </ProductDetail>
     </View>
   );
