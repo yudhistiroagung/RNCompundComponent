@@ -31,7 +31,7 @@ const s = StyleSheet.create({
     height: 200,
     marginBottom: 16,
   },
-  namePriceContaner: {
+  nameRatingContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -69,7 +69,7 @@ const findSingleComponent = (
 
   if (count > 1) {
     console.warn(
-      `Found multiple components of ${component.name}, will only render the first one.`
+      `Found multiple component of ${component.name}, will only render the first one.`
     );
   }
 
@@ -193,7 +193,7 @@ const ProductDetail = ({ product, children }: ProductDetailProps) => {
       <View style={s.container}>
         <React.Fragment>
           {image}
-          <View style={s.namePriceContaner}>
+          <View style={s.nameRatingContainer}>
             {name}
             {rating}
           </View>
