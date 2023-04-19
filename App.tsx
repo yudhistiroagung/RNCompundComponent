@@ -24,7 +24,7 @@ export default function App() {
       </ProductDetail>
       <Spacer />
       <ProductDetail product={remoteControl}>
-        {/** notice that we put ProductDetail.Name, only the first one will be rendered
+        {/** notice that we put ProductDetail.Name twice, only the first one will be rendered
          * this is also shows warning on console
          */}
         <ProductDetail.Name style={{ color: 'red' }} />
